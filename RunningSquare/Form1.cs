@@ -31,7 +31,7 @@ Delta pozycji X i Y wynosi od -75 do 75.*/
             var addX = pnlBox.Location.X + random.Next(-75, 75);
             var addY = pnlBox.Location.Y + random.Next(-75, 75);
 
-            if (pnlBox.Location.X + addX > 0 && pnlBox.Location.X + pnlBox.Width + addX < maxX && pnlBox.Location.Y + addY > 20 && pnlBox.Location.Y + pnlBox.Height + addY < maxY)
+            if (pnlBox.Location.X + addX > 0 && pnlBox.Location.X + pnlBox.Width + addX < maxX && pnlBox.Location.Y + addY > 50 && pnlBox.Location.Y + pnlBox.Height + addY < maxY)
             {
                 pnlBox.Location = new Point(addX, addY);
             }
@@ -40,7 +40,6 @@ Delta pozycji X i Y wynosi od -75 do 75.*/
             {
                 return;
             }
-
 
             byte R = (byte)random.Next(0, 256);
             byte G = (byte)random.Next(0, 256);
