@@ -26,19 +26,25 @@ Delta pozycji X i Y wynosi od -75 do 75.*/
 
         private void timerTicker_Tick(object sender, EventArgs e)
         {
-            if (pnlBox.Left > 0 && pnlBox.Right < maxX && pnlBox.Top < maxY && pnlBox.Bottom > 0)
+            
+
+            var addX = pnlBox.Location.X + random.Next(-75, 75);
+            var addY = pnlBox.Location.Y + random.Next(-75, 75);
+
+            if (pnlBox.Location.X + addX > 0 && pnlBox.Location.X + pnlBox.Width + addX < maxX && pnlBox.Location.Y + addY > 20 && pnlBox.Location.Y + pnlBox.Height + addY < maxY)
             {
-
-                int addX = pnlBox.Location.X + random.Next(-75, 75);
-                int addY = pnlBox.Location.Y + random.Next(-75, 75);
-
                 pnlBox.Location = new Point(addX, addY);
             }
-          
 
-            byte R = (byte)random.Next(0, 255);
-            byte G = (byte)random.Next(0, 255);
-            byte B = (byte)random.Next(0, 255);
+            else
+            {
+                return;
+            }
+
+
+            byte R = (byte)random.Next(0, 256);
+            byte G = (byte)random.Next(0, 256);
+            byte B = (byte)random.Next(0, 256);
 
             pnlBox.BackColor = Color.FromArgb(R, G, B);
         }
@@ -48,7 +54,6 @@ Delta pozycji X i Y wynosi od -75 do 75.*/
             Form form = (Form)sender;
             maxX = form.Size.Width;
             maxY = form.Size.Height;
-
         }
     }
 }

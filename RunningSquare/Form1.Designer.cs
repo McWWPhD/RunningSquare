@@ -36,9 +36,9 @@
             // pnlBox
             // 
             this.pnlBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlBox.Location = new System.Drawing.Point(373, 221);
+            this.pnlBox.Location = new System.Drawing.Point(290, 208);
             this.pnlBox.Name = "pnlBox";
-            this.pnlBox.Size = new System.Drawing.Size(103, 103);
+            this.pnlBox.Size = new System.Drawing.Size(56, 54);
             this.pnlBox.TabIndex = 0;
             // 
             // timerTicker
@@ -51,7 +51,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 576);
+            this.ClientSize = new System.Drawing.Size(627, 437);
             this.Controls.Add(this.pnlBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
